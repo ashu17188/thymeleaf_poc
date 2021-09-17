@@ -12,7 +12,7 @@
 	<groupId>org.ashu.thymeleaf</groupId>
 	<artifactId>thymeleaf_poc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo</name>
+	<name>thymeleaf_poc</name>
 	<packaging>jar</packaging>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -37,6 +37,11 @@
 		<dependency>
 			<groupId>org.ashu.java</groupId>
 			<artifactId>openapi-spec</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.example</groupId>
+			<artifactId>swagger-validator</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>

@@ -1,0 +1,12 @@
+#spring.thymeleaf.enabled=true
+#spring.thymeleaf.prefix=/resources/templates/
+
+spring:
+    profiles: 
+        active: ${ENV:localhost}
+    application:
+        name: "thymeleaf-poc"
+
+server:
+    servlet:
+        context-path: "/api/thymeleaf-poc/v1"
