@@ -13,12 +13,12 @@ import org.thymeleaf.templateresolver.ITemplateResolver;
 @Component
 public class TemplateProcessor {
 
-	private ContextCreator contextCreator;
+	private ContextCreatorImpl contextCreator;
 	
 	private ITemplateEngine templateEngine;
 	private TemplateReader templateReader;
 
-	public TemplateProcessor(ContextCreator contextCreator, ITemplateEngine templateEngine,
+	public TemplateProcessor(ContextCreatorImpl contextCreator, ITemplateEngine templateEngine,
 			TemplateReader templateReader) {
 		this.contextCreator = contextCreator;
 		this.templateEngine = templateEngine;
