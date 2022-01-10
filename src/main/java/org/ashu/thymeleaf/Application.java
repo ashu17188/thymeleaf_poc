@@ -8,8 +8,8 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication 
 @EnableAutoConfiguration
-@ComponentScan(basePackages = {"org.ashu.thymeleaf","org.openapitools", "org.ashu.thymeleaf.api" , "org.ashu.thymeleaf.config"})
-@EntityScan(basePackages= {"org.ashu.thymeleaf","org.openapitools", "org.ashu.thymeleaf.api" , "org.ashu.thymeleaf.config"})
+@ComponentScan(basePackages = {"org.ashu.thymeleaf","org.openapitools", "org.ashu.thymeleaf.api" , "org.ashu.thymeleaf.config", "org.ashu.schema.validation"})
+@EntityScan(basePackages= {"org.ashu.thymeleaf","org.openapitools", "org.ashu.thymeleaf.api" , "org.ashu.thymeleaf.config", "org.ashu.schema.validation"})
 public class Application {
 
     public static void main(String[] args) {

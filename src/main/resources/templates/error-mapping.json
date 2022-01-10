@@ -1,0 +1,32 @@
+{
+  "carrierName": "XYZ",
+  "errorMappings": [
+    {
+      "pathPattern": ".*SERVICE=policyCreateUpdate",
+      "httpMethods": [
+        "POST"
+      ],
+      "errorResponses": [
+        {
+          "carrierExceptionIdentifier": {
+            "httpStatusCode": 200,
+            "exceptionMessagePattern": ".*Invalid data."
+          },
+          "brokerException": {
+            "type": "BadRequestException",
+            "exceptionObject": {
+              "exceptionMessage": "Invalid answer for question",
+              "badRequest": [
+                {
+                  "name_of_field": "transaction_amount",
+                  "message": "transaction_amount must be same",
+                  "url": "body: $.policies[?@.line_of_business_code]"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

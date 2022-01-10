@@ -1,4 +1,4 @@
-package org.ashu.thymeleaf.validation.config;
+package org.ashu.thymeleaf.validation;
 
 import java.util.List;
 
@@ -9,14 +9,14 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties("json-paths.mandatory")
 public class JsonPaths {
 
-	private List<String> policy;
+	private List<String> paths;
 
-	public List<String> getPolicy() {
-		return policy;
+	public List<String> getPaths() {
+		return paths;
 	}
 
-	public void setPolicy(List<String> policy) {
-		this.policy = policy;
+	public void setPaths(List<String> paths) {
+		this.paths = paths;
 	}
 
 }

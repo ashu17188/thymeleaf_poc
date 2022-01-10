@@ -3,6 +3,8 @@ package org.ashu.thymeleaf;
 import java.util.List;
 import java.util.Map;
 
+import org.json.JSONObject;
+import org.json.XML;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 import org.thymeleaf.context.Context;
@@ -43,6 +45,29 @@ public class ContextCreator {
 			} catch (Exception e3) {
 				return input;
 			}
+		}
+	}
+
+	public Object xmlOrJsonToObject(String input) {
+		try {
+			if (this.isValidJson(input)) {
+				return this.jsonToObject(input);
+			} else {
+				JSONObject jsonObject = XML.toJSONObject(input);
+				return jsonObject.length() == 0 ? input : jsonObject;
+			}
+		} catch (Exception e) {
+			return input;
+		}
+	}
+
+	public boolean isValidJson(String input) {
+		try {
+			this.mapper.readTree(input);
+			return true;
+
+		} catch (Exception e) {
+			return false;
 		}
 	}
 }

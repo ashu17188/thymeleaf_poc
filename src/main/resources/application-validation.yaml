@@ -1,0 +1,4 @@
+json-paths:
+    mandatory:
+      pet:
+        -"$.category.origin"
