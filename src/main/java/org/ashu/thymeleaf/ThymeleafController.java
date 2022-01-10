@@ -13,7 +13,7 @@ import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.templateresolver.StringTemplateResolver;
 
-@RequestMapping("/api/test")
+@RequestMapping("/test")
 @RestController
 public class ThymeleafController {
 

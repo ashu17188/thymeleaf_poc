@@ -3,9 +3,10 @@
   "kind": "Deployment",
   "metadata": {
     "labels": {
-      "run": "[( ${name} )]"
+      "run": [[${name}]]
 	    },
-    "name": "[( ${name} )]",
-    "createdDate":  "[(${createdDate})]"
+    "name": [[${name}]],
+    "createdDate":  [[${createdDate}]],
+    "name1": [[${name}]]
   }
 }
