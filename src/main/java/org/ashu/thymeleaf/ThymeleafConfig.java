@@ -1,7 +1,5 @@
 package org.ashu.thymeleaf;
 
-import org.ashu.thymeleaf.validation.GenericRequestValidator;
-import org.ashu.thymeleaf.validation.JsonPathMandatoryValidator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.thymeleaf.templateresolver.StringTemplateResolver;

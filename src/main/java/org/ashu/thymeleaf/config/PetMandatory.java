@@ -1,25 +1,26 @@
-package org.ashu.thymeleaf.validation;
+package org.ashu.thymeleaf.config;
 
 import java.util.List;
 
+import org.ashu.validation.jsonpath.mandatory.MandatoryJsonPathSupplier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import com.atlassian.oai.validator.model.NormalisedPath;
 import com.atlassian.oai.validator.model.NormalisedPathImpl;
 
-@Service
-public class PolicyMandatory implements MandatoryJsonPathSupplier {
+@Component
+public class PetMandatory implements MandatoryJsonPathSupplier{
 
 	public static final String PET_POST = "pet";
-
+	
 	@Value("${server.servlet.context-path}")
 	private String basePath;
-
+	
 	@Autowired
 	private JsonPaths jsonPaths;
-
+	
 	@Override
 	public List<NormalisedPath> getApiPath() {
 		return List.of(new NormalisedPathImpl(PET_POST, basePath));
@@ -27,7 +28,8 @@ public class PolicyMandatory implements MandatoryJsonPathSupplier {
 
 	@Override
 	public List<String> getJsonPaths() {
-		return jsonPaths.getPaths();
+		return jsonPaths.getPet();
 	}
 
+	
 }

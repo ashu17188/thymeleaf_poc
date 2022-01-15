@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -16,11 +14,9 @@
 	<packaging>jar</packaging>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>12</java.version>
 		<springfox-version>2.9.2</springfox-version>
-		<swagger.request.validator.springmvc>2.18.1</swagger.request.validator.springmvc>
 		<json-path>2.6.0</json-path>
-		<swagger-request-validator-springmvc-version>2.20.0</swagger-request-validator-springmvc-version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -37,7 +33,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.jayway.jsonpath</groupId>
 			<artifactId>json-path</artifactId>
@@ -47,9 +43,12 @@
 			<artifactId>json</artifactId>
 			<version>20211205</version>
 		</dependency>
-		
-		<dependency> <groupId>com.example</groupId> <artifactId>swagger-validator</artifactId> 
-			<version>0.0.1-SNAPSHOT</version> </dependency>
+
+		<dependency>
+			<groupId>com.example</groupId>
+			<artifactId>swagger-validator</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
