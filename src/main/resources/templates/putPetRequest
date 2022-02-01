@@ -1,0 +1,20 @@
+[# th:with="pet=${petFromUI}"]
+{
+  "id": [[${pet[id]}]],
+  "category": {
+    "id": [[${pet[category][id]}]],
+    "name": [[${pet[category][name]}]]
+  },
+  "name": [[${pet[name]}]],
+  "photoUrls": [
+    [[${pet[photoUrls][0]}]]
+  ],
+  "tags": [
+    {
+      "id": [[${pet[tags][0][id]}]],
+      "name": [[${pet[tags][0][name]}]]
+    }
+  ],
+  "status": [[${pet[status]}]]
+}
+[/]
