@@ -11,3 +11,9 @@ spring:
 server:
     servlet:
         context-path: "/api/thymeleaf-poc/v1"
+    error:
+        include-message: always
+open:
+  api:
+    spec:
+      url: myspec.yml

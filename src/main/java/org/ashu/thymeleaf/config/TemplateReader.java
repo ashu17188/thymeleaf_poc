@@ -1,4 +1,4 @@
-package org.ashu.thymeleaf;
+package org.ashu.thymeleaf.config;
 
 import java.io.IOException;
 

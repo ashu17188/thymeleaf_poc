@@ -1,4 +1,4 @@
-package org.ashu.thymeleaf;
+package org.ashu.thymeleaf.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

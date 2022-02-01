@@ -1,4 +1,4 @@
-package org.ashu.thymeleaf;
+package org.ashu.thymeleaf.config;
 
 import java.util.List;
 import java.util.Map;

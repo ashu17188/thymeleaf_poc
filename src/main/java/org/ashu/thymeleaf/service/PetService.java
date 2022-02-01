@@ -7,7 +7,7 @@ import java.util.Map;
 import javax.validation.constraints.NotNull;
 
 import org.ashu.java.api.PetApiDelegate;
-import org.ashu.thymeleaf.TemplateProcessor;
+import org.ashu.thymeleaf.config.TemplateProcessor;
 import org.ashu.validation.util.JsonProcessor;
 import org.generated.models.Pet;
 import org.springframework.beans.factory.annotation.Autowired;
