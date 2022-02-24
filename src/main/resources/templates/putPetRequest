@@ -15,6 +15,8 @@
       "name": [[${pet[tags][0][name]}]]
     }
   ],
-  "status": [[${pet[status]}]]
+  "status": [[${pet[status]}]],
+  "buy_date": [[${pet[buy_date]}]],
+  "transaction_date": [[${pet[transaction_date]}]]
 }
 [/]
