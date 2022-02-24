@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "4c991c45-2217-483f-8682-e739ec00c209",
+		"name": "ThymeleafApis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PetCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"category\": {\n    \"id\": 1,\n    \"name\": \"Dogs\"\n  },\n  \"id\": 10,\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"status\": \"available\",\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/thymeleaf-poc/v1/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"thymeleaf-poc",
+						"v1",
+						"pet"
+					]
+				},
+				"description": "Create Pet"
+			},
+			"response": []
+		},
+		{
+			"name": "PetUpdate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"category\": {\n    \"id\": 12,\n    \"name\": \"Dogs\"\n  },\n  \"id\": 10,\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"status\": \"available\",\n  \"tags\": [\n    {\n      \"id\": 0,\n      \"name\": \"string\"\n    }\n  ],\n  \"buy_date\": \"2022-02-24\",\n  \"transaction_date\": \"2022-02-24T16:04:22Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/thymeleaf-poc/v1/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"thymeleaf-poc",
+						"v1",
+						"pet"
+					]
+				},
+				"description": "Create Pet"
+			},
+			"response": []
+		},
+		{
+			"name": "PetGetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/thymeleaf-poc/v1/pet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"thymeleaf-poc",
+						"v1",
+						"pet"
+					]
+				},
+				"description": "Fetch Pets"
+			},
+			"response": []
+		}
+	]
+}
