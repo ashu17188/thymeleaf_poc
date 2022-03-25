@@ -1,0 +1,35 @@
+{
+  "carrierName": "ABC_Corp",
+  "errorMappings": [
+    {
+      "pathPattern": "/api/thymeleaf-poc/v1/pet",
+      "httpMethods": [
+        "PUT"
+      ],
+      "applicableProducts": [
+        "WORK"
+      ],
+      "errorResponses": [
+        {
+          "carrierExceptionIdentifier": {
+            "httpStatusCode": 400,
+            "exceptionMessagePattern": ".*Invalid Pet Info.*"
+          },
+          "brokerException": {
+            "type": "BadRequestException",
+            "exceptionObject": {
+              "exceptionMessage": "Invalid Pet Info.",
+              "badRequest": [
+                {
+                  "name_of_field": "fein",
+                  "message": "Invalid Pet Info provider by user",
+                  "urn": "body:pet"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+   ]
+}

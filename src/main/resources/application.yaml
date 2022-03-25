@@ -17,3 +17,8 @@ open:
   api:
     spec:
       url: myspec.yml
+      
+product:
+  name: WORK
+  pet:
+    url: /api/thymeleaf-poc/v1/pet

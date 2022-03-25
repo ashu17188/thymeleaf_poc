@@ -1,6 +1,9 @@
 package org.ashu.thymeleaf;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
@@ -14,33 +17,54 @@ class ThymeleafConfigTest {
 //		fail("Not yet implemented");
 	}
 
+	class Interval {
+		int start;
+		int end;
+
+		public Interval(int start, int end) {
+			this.start = start;
+			this.end = end;
+		}
+	};
+
 	@Test
 	void testSumPair() {
-		int[] a = new int[] {1, 2, 7, 1, 5};
-		log.info("Minimum subset sum difference: {}", canPartition(a));
+		int arr [] = {1, 3, 8, 10, 15  };
+		int key = 12;
+		log.info("Start: {} and End: {} of range.", findStartOfRange(arr, key), findEndOfRange(arr, key) );
 	}
 
-	public int canPartition(int num[]) {
-		int sum = 0;
-		for (int a : num) {
-			sum += a;
+	public int findStartOfRange(int arr[], int key) {
+		int start = 0, end = arr.length - 1;
+		int keyIndex = Integer.MAX_VALUE;
+		while (start < end) {
+			int mid = start + (end - start) / 2;
+			keyIndex = mid;
+			if (arr[mid] < key) {
+				start = mid + 1;
+			} else {
+				end = mid - 1;
+			}
+			
 		}
-		Integer dp[][] = new Integer[num.length][sum + 1];
-		return canPartitionRec(dp, num, 0, 0, 0);
+		if(arr[keyIndex] !=  key) return -1;
+		return  end + 1 >= arr.length ?-1: end + 1;
 	}
 
-	private int canPartitionRec(Integer dp[][], int num[], int currentIndex, int sum1, int sum2) {
-		if (currentIndex == num.length) {
-			return Math.abs(sum1 - sum2);
+	public int findEndOfRange(int arr[], int key) {
+		int start = 0, end = arr.length - 1;
+		int keyIndex = Integer.MAX_VALUE;
+		while (start < end) {
+			int mid = start + (end - start) / 2;
+			keyIndex = mid;
+			if (arr[mid] <= key) {
+				start = mid + 1;
+			} else {
+				end = mid - 1;
+			}
 		}
-		if (dp[currentIndex][sum1] == null) {
-			int diff1 = canPartitionRec(dp, num, currentIndex + 1, sum1 + num[currentIndex], sum2);
-
-			int diff2 = canPartitionRec(dp, num, currentIndex + 1, sum1, sum2 + num[currentIndex]);
-			int min = Math.min(diff1, diff2);
-			dp[currentIndex][sum1] = min;
-		}
-		return dp[currentIndex][sum1];
+		if(arr[keyIndex] !=  key) return -1;
+		return start- 1;
 	}
 
 }
